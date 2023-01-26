@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijeras</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="py-20">
+    <!-- Title -->
+    <div class="flex justify-center pt-5">
+        <h1 class="font-bold text-[2.4rem]">Piedra, papel o tijera</h1>
+    </div>
+    <div class="flex justify-center">
+        <p class="pt-5 md:text-[1.2rem] font-bold px-2 md:px-0">By: <span class="text-[red]">Habiesu</span></p>
+    </div>
+    
+    <!-- Acá están los datos del usuario y de la maquina -->
+
+    <div class="md:mx-[110px] md:my-[128px] lg:mx-[200px] xl:mx-[250px] 2xl:mx-[400px]">
+        <div class="md:flex md:flex-row md:justify-between md:items-start flex flex-col items-center gap-10 mt-10">
+                <!-- Player Scoreboard -->
+            <div id="player-info-container" class="flex flex-col ">
+                <p class="font-bold text-[1.4rem]">Jugador<span class="text-[#000000]" id="player"></span></p>
+                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="player-victories"></span></p>
+            </div>
+                <!-- Match history -->
+            <div class="flex flex-col items-center">
+                <p class="text-[1.5rem] font-bold">Historial de partidas</p>
+                <div id="history" class="color-[#fff] h-[160px] border-[4px] border-[#000000] bg-green-500 min-h-[40px] max-h-[300px] w-[200px] rounded-[10px] mt-4"></div>    
+            </div>
+                <!-- Machine Scoreboard -->
+            <div id="machine-info-container" class="flex flex-col ">
+                <p class="font-bold text-[1.4rem]">Maquina</p>
+                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="machine-victories"></span></p>
+            </div>        
+        </div>
+
+        <!-- Botones -->
+      
+        <div class="flex items-end justify-center relative gap-10 bottom-[-7rem] bg-transparent" id="player-buttons">
+            <button onclick="opciones('piedra');" class="px-2 py-1 ">
+                <img id="botton" class="w-[50px] m-auto md:w-[70px]" src="./rock.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Piedra</span>
+            </button>
+            <button onclick="opciones('papel');" class=" px-2 py-1  ">
+                <img id="botton" class="w-[50px] m-auto md:w-[70px]" src="./paper.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Papel</span>
+            </button>
+            <button onclick="opciones('tijera');" class=" px-2 py-1  ">
+                <img id="botton" class="w-[50px] m-auto md:w-[70px]" src="./scissors.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Tijera</span>
+            </button>
+        </div>       
+
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
